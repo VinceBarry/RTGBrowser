@@ -234,23 +234,28 @@ public class FileOperator {
 
     public int writeBitmap(){
         int rescode = 0;
-        if(isSdCardExist()) {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                if(isSdCardExist()) {
 //            byte[] buf = new byte[2048];
 //            int len = 0;
-            if (fileBitmap == null) {
-                fileBitmap = new File(BrowserDir(),bitmapName+".jpg");
+                    if (fileBitmap == null) {
+                        fileBitmap = new File(BrowserDir(),bitmapName+".jpg");
+                    }
+                    try {
+                        BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(fileBitmap));
+                        bitmap.compress(Bitmap.CompressFormat.JPEG,90,bos);
+                        bos.flush();
+                        bos.close();
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
             }
-            try {
-                BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(fileBitmap));
-                bitmap.compress(Bitmap.CompressFormat.JPEG,90,bos);
-                bos.flush();
-                bos.close();
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
+        }).start();
         return rescode;
     }
     public int write(int request) {
