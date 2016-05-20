@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    android:background="#60FFFFFF"
+    android:layout_height="match_parent">
+<ImageView
+    android:background="#60FFFFFF"
+    android:id="@+id/iv_cloud_item_head"
+    android:layout_width="48dp"
+    android:layout_height="48dp"
+    android:layout_marginRight="10dp"
+    android:src="@mipmap/ic_launcher"/>
+    <TextView
+        android:id="@+id/tv_cloud_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/iv_cloud_item_head"
+        android:layout_toRightOf="@id/iv_cloud_item_head"
+        android:textSize="17sp"
+        android:textColor="@color/textPrimary"
+        android:text="Title"/>
+    <TextView
+        android:id="@+id/tv_cloud_item_url"
+        android:layout_toRightOf="@id/iv_cloud_item_head"
+        android:layout_below="@+id/tv_cloud_item_title"
+        android:layout_width="wrap_content"
+        android:maxLines="1"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:text="12sp"/>
+    <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_toLeftOf="@+id/tv_cloud_item_like"
+        android:src="@drawable/ic_like"/>
+    <TextView
+        android:id="@+id/tv_cloud_item_like"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:gravity="center_vertical"
+        android:layout_alignParentEnd="true"
+        android:text="100"/>
+
+</RelativeLayout>

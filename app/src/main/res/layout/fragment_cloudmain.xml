@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@drawable/material_red"
+    android:layout_height="match_parent">
+    <ListView
+        android:id="@+id/lv_cloud_main"
+        android:scrollbars="none"
+        android:background="#00000000"
+        android:padding="10dp"
+        android:divider="#00F44336"
+        android:dividerHeight="14dp"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <ImageView
+            android:id="@+id/bt_cloud_refresh"
+            android:background="@drawable/bt_common"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:scaleType="center"
+            android:src="@drawable/sync"/>
+        <ImageView
+            android:id="@+id/bt_cloud_unlogin"
+            android:background="@drawable/bt_common"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="center"
+            android:clickable="true"
+            android:src="@drawable/ic_unlogin"/>
+    </LinearLayout>
+</LinearLayout>
+    <ProgressBar
+        android:id="@+id/pb_cloud"
+        android:visibility="visible"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        />
+</FrameLayout>

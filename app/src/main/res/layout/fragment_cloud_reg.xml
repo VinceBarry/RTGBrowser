@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/material_red">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/et_cloud_reg_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/ll_webline"
+            android:gravity="center"
+            android:hint="用户名"
+            android:maxLength="20"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:singleLine="true"
+            android:textColor="@color/textPrimary"
+            android:textColorHint="@color/icons"
+            android:textSize="16sp" />
+        <EditText
+            android:id="@+id/et_cloud_reg_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/ll_webline"
+            android:gravity="center"
+            android:hint="密码"
+            android:inputType="textPassword"
+            android:maxLength="10"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:singleLine="true"
+            android:textColor="@color/textPrimary"
+            android:textColorHint="@color/icons"
+            android:textSize="16sp" />
+        <EditText
+            android:id="@+id/et_cloud_reg_pwdagain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/ll_webline"
+            android:gravity="center"
+            android:hint="确认密码"
+            android:inputType="textPassword"
+            android:maxLength="10"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:singleLine="true"
+            android:textColor="@color/textPrimary"
+            android:textColorHint="@color/icons"
+            android:textSize="16sp" />
+        <Button
+            android:id="@+id/bt_cloud_reg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bt_common_se"
+            android:gravity="center_horizontal"
+            android:paddingTop="15dp"
+            android:textColor="#FFFFFF"
+            android:text="注册"
+            android:textSize="16sp" />
+    </LinearLayout>
+</FrameLayout>

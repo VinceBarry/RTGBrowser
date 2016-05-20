@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/material_red">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/et_cloud_login_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/ll_webline"
+            android:gravity="center"
+            android:hint="用户名"
+            android:maxLength="20"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:singleLine="true"
+            android:textColor="@color/textPrimary"
+            android:textColorHint="@color/icons"
+            android:textSize="16sp" />
+        <EditText
+            android:id="@+id/et_cloud_login_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/ll_webline"
+            android:gravity="center"
+            android:hint="密码"
+            android:inputType="textPassword"
+            android:maxLength="10"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:singleLine="true"
+            android:textColor="@color/textPrimary"
+            android:textColorHint="@color/icons"
+            android:textSize="16sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/bt_cloud_login_enter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="25dp"
+                android:layout_weight="1"
+                android:background="@drawable/bt_common_se"
+                android:gravity="center_horizontal"
+                android:paddingTop="15dp"
+                android:textColor="#FFFFFF"
+                android:text="登陆"
+                android:textSize="14sp" />
+            <Button
+                android:id="@+id/bt_cloud_login_reg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bt_common_se"
+                android:gravity="center_horizontal"
+                android:paddingTop="15dp"
+                android:textColor="#FFFFFF"
+                android:text="注册"
+                android:textSize="14sp" />
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:id="@+id/autoLoginCb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="自动登录" />
+            <TextView
+                android:id="@+id/forgetPasswordTx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="忘记密码?" />
+        </RelativeLayout>
+    </LinearLayout>
+</FrameLayout>

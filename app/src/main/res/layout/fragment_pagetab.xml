@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#AA000000">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v4.view.ViewPager
+            android:clickable="true"
+            android:id="@+id/viewpager"
+            android:background="#FFFFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp" />
+    </LinearLayout>
+    <me.relex.circleindicator.CircleIndicator
+        android:layout_gravity="bottom"
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        app:ci_drawable="@drawable/ci_selected"
+        app:ci_drawable_unselected="@drawable/ci_unselected"
+        android:layout_height="80dp"/>
+        <com.melnykov.fab.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|right"
+            android:layout_margin="16dp"
+            android:src="@drawable/ic_close"
+            fab:fab_colorNormal="@color/colorAccent"
+            fab:fab_colorPressed="@color/colorAccentDark"
+            fab:fab_colorRipple="@color/colorPrimaryLight" />
+</FrameLayout>

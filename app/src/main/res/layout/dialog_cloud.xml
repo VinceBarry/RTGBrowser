@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textSize="20sp"
+    android:singleLine="true"
+    android:hint="文章标题"
+    android:id="@+id/tv_dialog_cloud_title"/>
+    <EditText
+        android:hint="评论内容"
+        android:textSize="16sp"
+        android:minLines="7"
+        android:gravity="start"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_dialog_cloud_comment"/>
+
+</LinearLayout>

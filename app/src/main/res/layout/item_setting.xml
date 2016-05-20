@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    android:background="#60FFFFFF"
+    android:layout_height="match_parent">
+    <!--标题，网址，注释，分类-->
+    <LinearLayout
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/iv_set_icon"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_web_2"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:scaleType="center"
+            />
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:layout_toRightOf="@+id/iv_his_icon"
+            android:id="@+id/tv_set_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:maxLines="1"
+            android:textColor="@color/textPrimary"
+            android:text="文件名"/>
+    </LinearLayout>
+
+</RelativeLayout>

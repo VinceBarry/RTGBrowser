@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <!--
+        定义数据库名称，.db可加可不加，如果没有加，系统自动会判断然后加上。
+    -->
+    <dbname value="demo" ></dbname>
+
+    <!--
+	定义数据库版本（版本管理的地方），每次更新数据库在此处加一LitePal会自动处理更新。
+    -->
+    <version value="6" ></version>
+
+    <!--
+	定义表头，LitePal会根据映射类创建表
+    -->
+    <list>
+        <mapping class="com.example.vincebarry.exam.table.TableFavoriteLocal"></mapping>
+        <mapping class="com.example.vincebarry.exam.table.TableDownloadLocal"></mapping>
+        <mapping class="com.example.vincebarry.exam.table.TableHistoryLocal"></mapping>
+        <!--注册一个映射类-->
+        <!--注册一个映射类-->
+    </list>
+</litepal>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">RTGBrowser</string>
+    <string name="drawer_main">浏览窗</string>
+    <string name="drawer_history">历史记录</string>
+    <string name="drawer_favorite">收藏夹</string>
+    <string name="drawer_download">下载</string>
+    <string name="drawer_setting">设置</string>
+    <string name="drawer_about">关于</string>
+    <string name="drawer_quit">退出</string>
+</resources>
