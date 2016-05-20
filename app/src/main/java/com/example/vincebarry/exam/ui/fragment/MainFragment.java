@@ -204,6 +204,11 @@ public class MainFragment extends Fragment implements View.OnClickListener {
             @Override
             public void afterTextChanged(Editable s) {
                 //Do nothing.
+                if (s.toString().trim().equals("")) {
+                    mIvDelete.setVisibility(View.GONE);
+                } else {
+                    mIvDelete.setVisibility(View.VISIBLE);
+                }
             }
         });
     }
