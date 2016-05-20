@@ -156,10 +156,11 @@ public class MainFragment extends Fragment implements View.OnClickListener {
         initEvent();
         setURL((String) SPUtils.get(getActivity(),"CONTENT_MAINURL","http://www.baidu.com/"));
         WebViewSetter webViewSetter = new WebViewSetter(getContext(), MainFragment.this, mWebView, URL, downloadManager, new HelloWebViewClient(), new HelloWebChromeClient());
-        webViewSetter.Setting();
-        newTabFlag = true;
         mWebView.loadUrl(URL);
         mWebViewList.add(mWebView);
+        webViewSetter.Setting();
+        newTabFlag = true;
+
         mEtDigTitle.setText(mWebView.getTitle().toString());
 
         return view;
@@ -462,10 +463,10 @@ public class MainFragment extends Fragment implements View.OnClickListener {
             case R.id.menu_new:
                 WebView mWebView = new WebView(getActivity());
                 WebViewSetter webViewSetter = new WebViewSetter(getContext(), MainFragment.this, mWebView, URL, downloadManager,new HelloWebViewClient(), new HelloWebChromeClient());
-                webViewSetter.Setting();
                 newTabFlag = true;
                 mWebView.loadUrl(URL);
                 mWebViewList.add(mWebView);
+                webViewSetter.Setting();
                 LinearLayout.LayoutParams lps = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT, 1);
                 mLLWebView.removeAllViews();
                 mLLWebView.addView(mWebView, lps);
@@ -546,10 +547,10 @@ public class MainFragment extends Fragment implements View.OnClickListener {
         public boolean onCreateWindow(WebView view, boolean isDialog, boolean isUserGesture, Message resultMsg) {
             WebView mWebView = new WebView(getActivity());
             WebViewSetter webViewSetter = new WebViewSetter(getActivity(), MainFragment.this, mWebView, URL, downloadManager, new HelloWebViewClient(), new HelloWebChromeClient());
-            webViewSetter.Setting();
             newTabFlag = true;
             mWebView.loadUrl(view.getUrl());
             mWebViewList.add(mWebView);
+            webViewSetter.Setting();
             LinearLayout.LayoutParams lps = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT, 1);
             mLLWebView.removeAllViews();
             mLLWebView.addView(mWebView, lps);

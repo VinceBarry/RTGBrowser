@@ -12,20 +12,12 @@ import android.support.v7.app.AlertDialog;
  */
 public class MyDialog {
     private onButtonClick mButtonClickCallBack;
-    private Context context;
-    private String title;
-    private String message;
-    private int type;
     AlertDialog.Builder builderSec;
     public interface onButtonClick{
         public void OnPositive();
         public void OnNegative();
     }
     public MyDialog(Context context,String title,String message,int type){
-        this.context = context;
-        this.title = title;
-        this.message = message;
-        this.type = type;
         switch(type){
             case Constant.MYDIALOG_ONEBUTTON:
                 builderSec = new AlertDialog.Builder(context);
